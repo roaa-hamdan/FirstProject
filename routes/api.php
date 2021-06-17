@@ -20,3 +20,6 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 Route::get('/getdataa',[RegistationCon::class,'getdata']);
 
+Route::get('userL', [RegistationCon::class,'saveData']);
+Route::get('updateData/{id}', [RegistationCon::class,'updateDataa']);
+Route::get('Save/{i}/{j}/{k}/{b}', [RegistationCon::class,'create']);

@@ -1,61 +1,43 @@
 <template>
-           <div class="flex justify-center	items-center h-30 bg-blue-300	">
-             <h1 >
-                Employees data
-             </h1>
-           </div>
- 
-     <div class="flex justify-center	items-center mt-20	">
+  <div class="c-subheader px-3 bg-gray-600 d-flex justify-content-center">
+    <ol class="breadcrumb border-0 mb-0">
+    <li role="presentation" class="breadcrumb-item">
+        <router-link to="/UserInfoI" class="router-link-active color-red"  target="_self">
+    Get User Info </router-link>
+       </li>
+      <li role="presentation" class="breadcrumb-item ">
+       <router-link to="/SingUp" class="router-link-active color-red"  target="_self">
+    Add new User </router-link>
+      
+         </li>
+      <li role="presentation" class="breadcrumb-item ">
+        <router-link to="/" class="router-link-active color-red"  target="_self">
+   Contact Us </router-link>
 
-<button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded " @click.prevent="getData" type="submit">
-Get Employees data
-</button>
-</div>
-<div class= " mt-20  flex justify-center " >
-  
-  <table  >
-    <tr class="bg-blue-50" >
 
-      <th>
-        User Name
-      </th>
-       <th>
-       Phone Number
-      </th>
-       <th>
-        User Id
-      </th>
-    </tr>
-      <tr v-for="(user,i) in users" :key="i"   v-bind:class = "(i%2==0)?'bg-blue-200':'bg-blue-50'">
-       <td>{{ user.name }}</td> 
-              <td>{{ user.phone }}</td> 
-       <td>{{ user.id }}</td> 
+         </li>
+            <li role="presentation" class="breadcrumb-item ">
+        <router-link to="GetUserInfo" class="router-link-active color-red"  target="_self">
+   Find User </router-link>
+         </li>
+        </ol>
+        </div>
+          <router-view></router-view>
 
-    </tr>
-  </table>
-</div>
 
+          <footer data-v-51d170c5="" class="c-footer fixed-bottom">
+            <div>
+              <a href="https://coreui.io" target="_blank">
+              CoreUI</a><span class="ml-1">
+                © 2021 Endeavor</span>
+                </div>
+                <div class="mfs-auto">
+                  <span target="_blank" class="mr-1">
+                    Managed by
+                    </span>
+                                        </div>
+                    </footer>
 </template>
 <script>
-   import axios from 'axios';
 
-export default {
-    data(){
-        return{
-            users:[],
-        }
-    },
-    methods:{
-        getData(){
-            axios.get('http://127.0.0.1:8000/api/getdataa').then((res) =>{
-this.users=res.data;
-            
-            }).catch((error) =>{
-                                console.log(error);
-
-            })
-        }
-    }
-}
 </script>
-

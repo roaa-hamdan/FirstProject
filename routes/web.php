@@ -21,3 +21,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::get('/getdataa',[Controller::class,'getdata']);
+
+Route::get('/Save', [RegistationCon::class,'create']);
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+

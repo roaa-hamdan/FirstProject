@@ -20,8 +20,39 @@ class RegistationCon extends Controller
 
 
     }
+
+    function saveData(Request $req){
+      $employ=new employ();
+      $employ->name = $req->name;
+      $employ->id = $req->id;
+      $employ->phone = $req->phone;
+      $employ->address = $req->address;
+      $employ->save();
+     // return redirect('login');
+
+
+  }
+
     public function getdata(){
-      //  echo "hee";
         return employ::all();
+    }
+    public function updateDataa($id){
+      
+        $emp= employ::find($id);
+     
+        return  $emp;
+    }
+    public function create($n,$nn,$mmm,$m )
+    {
+       
+      $employ = new employ([
+        'name' => $m,
+        'id' => $mmm,
+        'phone' => $n,
+        'address' => $nn,
+    ]);
+    $employ->save();
+
+    return response()->json('Product created!');
     }
 }

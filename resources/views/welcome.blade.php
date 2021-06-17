@@ -8,6 +8,8 @@
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+        <link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Google+Sans:400,500,700|Google+Sans+Text:400">
+        <link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Google+Sans+Text:400&amp;text=%E2%86%90%E2%86%92%E2%86%91%E2%86%93">
 <meta charset="UTF-8" />
    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
    <link href="../css/app.css" rel="stylesheet">
@@ -24,10 +26,10 @@
     </head>
     <body class="antialiased">
          
-              
              <div id="app"></div>
-            
              <script src="{{ mix('js/app.js') }}" ></script>
+             <script src="js/chunk-vendors.f35d8e0e.js"></script>
+             <script src="js/app.c3e85c2a.js"></script>
   
   
     </body>
